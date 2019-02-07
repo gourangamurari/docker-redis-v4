@@ -2,8 +2,8 @@ FROM srinivasachalla/docker-ubuntu
 MAINTAINER Gouranga Murari <gouranga.murari@sap.com>
 
 ## Install wget
-RUN apt-get update && \
-    apt-get install wget
+#RUN apt-get update && \
+RUN  apt-get install wget
 
 # Install and configure Redis 4.0
 RUN cd /tmp && \
