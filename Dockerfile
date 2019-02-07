@@ -1,5 +1,5 @@
-#FROM srinivasachalla/docker-ubuntu
-FROM amd64/ubuntu
+FROM srinivasachalla/docker-ubuntu
+#FROM amd64/ubuntu
 MAINTAINER Gouranga Murari <gouranga.murari@sap.com>
 
 ## Install wget
