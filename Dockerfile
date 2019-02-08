@@ -16,6 +16,7 @@ RUN cd /tmp && \
     mkdir -p /etc/redis && \
     cp -f *.conf /etc/redis && \
     sed -i 's/^\(dir .*\)$/# \1\ndir \/data/' /etc/redis/redis.conf && \
+    sed -i 's/bind 127.0.0.1/# bind 127.0.0.1/' /etc/redis/redis.conf && \
     apt-get install --yes runit && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
