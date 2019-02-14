@@ -12,10 +12,10 @@ Different versions of Redis are located at the github repo [tags](https://github
 
 ### Build the image
 
-To create the image `gourangamurari/docker-redis-v4`, execute the following command on the `docker-redis` folder:
+To create the image `redisaas/docker-redis-v4`, execute the following command on the `docker-redis` folder:
 
 ```
-$ docker build -t gourangamurari/docker-redis-v4 .
+$ docker build -t redisaas/docker-redis-v4 .
 ```
 
 ### Run the image
@@ -23,7 +23,7 @@ $ docker build -t gourangamurari/docker-redis-v4 .
 To run the image and bind to host port 6379:
 
 ```
-$ docker run -d --name redis -p 6379:6379 gourangamurari/docker-redis-v4
+$ docker run -d --name redis -p 6379:6379 redisaas/docker-redis-v4
 ```
 
 The first time you run your container, a new random password will be generated. To get the password,
@@ -50,7 +50,7 @@ $ docker run -d \
     --name redis \
     -p 6379:6379 \
     -e REDIS_PASSWORD=mypassword \
-    gourangamurari/docker-redis-v4
+    redisaas/docker-redis-v4
 ```
 
 #### Maxmemory
@@ -62,7 +62,7 @@ $ docker run -d \
     --name redis \
     -p 6379:6379 \
     -e REDIS_MAXMEMORY=314572800 \
-    gourangamurari/docker-redis-v4
+    redisaas/docker-redis-v4
 ```
 
 #### Extra arguments
@@ -71,7 +71,7 @@ When you run the container, it will start the Redis server without any arguments
 just add them to the `run` command:
 
 ```
-$ docker run -d --name redis -p 6379:6379 gourangamurari/docker-redis-v4 --loglevel debug
+$ docker run -d --name redis -p 6379:6379 redisaas/docker-redis-v4 --loglevel debug
 ```
 
 #### Persistent data
@@ -85,5 +85,5 @@ $ docker run -d \
     --name redis \
     -p 6379:6379 \
     -v /tmp/redis:/data \
-    gourangamurari/docker-redis-v4
+    redisaas/docker-redis-v4
 ```
